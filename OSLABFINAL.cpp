@@ -150,23 +150,7 @@ int main(int argc, char *const argv[])
 		cerr << "Error: Please enter a positive integer for size of pages" << endl;
 		return 1;
 	}
-	cout << "Debug: Reach arg 4." << endl;
-	iss.str(argv[4]);
-	if (!(iss >> prAlgo))
-	{
-		cerr << "Error: Please enter a valid argument for page replacement algorithm" << endl;
-		return 1;
-	}
-	iss.clear();
-	for (int i = 0; i < prAlgo.length(); i++)
-	{
-		Algo += tolower(prAlgo[i]);
-	}
-	if ((Algo != "fifo") && (Algo != "lru") && (Algo != "clock"))
-	{
-		cerr << "Error: Please enter a valid page replacement algorithm to use" << endl;
-		return 1;
-	}
+
 
 	int pnum = processSize.size();
 	int tnum = trace.size();
